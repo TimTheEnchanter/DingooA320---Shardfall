@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dingoo A320 starter</title>
+<style>
+  html, body { margin: 0; background: #0b0b14; color: #b8b8d0; font: 14px/1.5 monospace; }
+  main { display: flex; flex-direction: column; align-items: center; padding: 24px; gap: 12px; }
+  canvas { width: 960px; max-width: 95vw; aspect-ratio: 4 / 3; image-rendering: pixelated;
+           background: #000; outline: none; border: 2px solid #2a2a44; }
+  .keys { opacity: 0.8; text-align: center; }
+  kbd { border: 1px solid #44446a; border-radius: 3px; padding: 0 4px; }
+</style>
+</head>
+<body>
+<main>
+  <canvas id="canvas" tabindex="0" oncontextmenu="event.preventDefault()"></canvas>
+  <div class="keys">
+    D-pad <kbd>arrows</kbd> &middot; A <kbd>Z</kbd> &middot; B <kbd>X</kbd> &middot;
+    X <kbd>C</kbd> &middot; Y <kbd>V</kbd> &middot; L <kbd>Q</kbd> &middot; R <kbd>W</kbd> &middot;
+    Start <kbd>1</kbd> &middot; Select <kbd>2</kbd><br>
+    Click the screen first to give it keyboard focus.
+  </div>
+</main>
+<script>
+  var Module = {
+    canvas: document.getElementById('canvas'),
+    print: function (t) { console.log(t); },
+    printErr: function (t) { console.error(t); }
+  };
+  Module.canvas.addEventListener('click', function () { Module.canvas.focus(); });
+  window.addEventListener('keydown', function (e) {
+    if (['ArrowUp','ArrowDown','ArrowLeft','ArrowRight',' ','Tab','Backspace'].indexOf(e.key) >= 0)
+      e.preventDefault();
+  });
+</script>
+<script async type="text/javascript" src="index.js"></script>
+</body>
+</html>
+
+
