@@ -1,0 +1,20 @@
+Shardfall music
+===============
+
+The built-in tunes are ProTracker modules from The Mod Archive (modarchive.org):
+
+  title.mod    "Stardust Jam"         by Drozerix  Public Domain   (drozerix_-_stardust_jam.mod, module 201039)
+  mission.mod  "Neon Techno"          by Drozerix  Public Domain   (drozerix_-_neon_techno.mod,  module 178172)
+  boss.mod     "Stars (4ch. version)" by cs127     CC BY (Creative Commons Attribution)
+                                                   (cs127_-_stars_4ch.mod, module 201917)
+               https://modarchive.org/index.php?request=view_by_moduleid&query=201917
+
+"Stars" is used under the Creative Commons Attribution licence: keep this credit
+(and the one on the title screen) in anything you share.
+
+placeholder/ holds the original stand-in tunes made by tools/make_music.py.
+
+To change the built-in music: replace title.mod / mission.mod / boss.mod here and
+run `make music` (rebuilds src/game/shardfall/music_data.c). To change it without
+rebuilding, put files with those names next to the game instead.
+Only 4-channel ProTracker files work (M.K., M!K!, 4CHN, FLT4).

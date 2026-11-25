@@ -20,7 +20,7 @@
     D-pad <kbd>arrows</kbd> &middot; A <kbd>Z</kbd> &middot; B <kbd>X</kbd> &middot;
     X <kbd>C</kbd> &middot; Y <kbd>V</kbd> &middot; L <kbd>Q</kbd> &middot; R <kbd>W</kbd> &middot;
     Start <kbd>1</kbd> &middot; Select <kbd>2</kbd><br>
-    Click the screen first to give it keyboard focus.
+    Click the screen first to give it keyboard focus (and switch the sound on).
   </div>
 </main>
 <script>
@@ -34,6 +34,14 @@
     if (['ArrowUp','ArrowDown','ArrowLeft','ArrowRight',' ','Tab','Backspace'].indexOf(e.key) >= 0)
       e.preventDefault();
   });
+  /* browsers keep sound off until the page is used: wake SDL's audio on the first key or click */
+  function wakeAudio() {
+    var ctx = Module.SDL2 && Module.SDL2.audioContext;
+    if (ctx && ctx.state === 'suspended') ctx.resume();
+  }
+  window.addEventListener('keydown', wakeAudio);
+  window.addEventListener('mousedown', wakeAudio);
+  window.addEventListener('touchstart', wakeAudio);
 </script>
 <script async type="text/javascript" src="index.js"></script>
 </body>

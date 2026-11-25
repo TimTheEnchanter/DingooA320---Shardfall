@@ -1,0 +1,8 @@
+# GMenu2X link for Shardfall. Copy this file into a GMenu2X section folder,
+# for example /usr/local/gmenu2x/sections/games/shardfall (no extension),
+# and change the paths to where you copied the game.
+title=Shardfall
+description=Flat-shaded space shooter
+icon=/usr/local/games/shardfall/shardfall.png
+exec=/usr/local/games/shardfall/shardfall.dge
+wrapper=true
