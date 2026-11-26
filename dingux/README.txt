@@ -25,6 +25,15 @@ trouble. Yellow on the radar is where to go next.
 
 Each mission is ranked S, A, B or C on time, accuracy and shield left.
 Progress and settings are saved in shardfall.sav next to the game.
+Rumour has it that pilots with an A on every mission get to see what's
+beyond the belt.
+
+Score Attack
+------------
+Endless waves, one life. Quick kills build a combo multiplier (up to x8);
+clearing a wave earns a bonus and some shield back. Beat the table and enter
+your initials. Missiles from the silver ships home in: break hard and they
+overshoot.
 
 Options
 -------
