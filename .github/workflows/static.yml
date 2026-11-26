@@ -37,7 +37,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload entire repository
-          path: '/web-shardfall/index.html'
+          path: 'https://github.com/TimTheEnchanter/DingooA320---Shardfall/blob/ad615dc5d0a4943fafbeb19bbc1224b26beb1922/web-shardfall/index.html'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
